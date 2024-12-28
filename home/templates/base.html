@@ -1,3 +1,4 @@
+{% load i18n %}
 {% load static %}
 
 <!DOCTYPE html>
@@ -15,7 +16,30 @@
 </head>
 <body>
     <header>
+        <div class="header-item">
+            <img id="logo-img" src="{% static 'images/logo.svg' %}" alt="logo">
+        </div>
+        <button id="menu-button" class="header-item">
+            <img id="menu-button-img" src="{% static 'images/menu.png' %}" alt="menu">
+        </button>
     </header>
+    <menu>
+        {% block menu %} 
+            <!-- <div id="lang-box">
+                <label for="language-picker-select"></label>
+                <select name="language-picker-select" id="language-picker-select">
+                    <option lang="uk" value="uk">{% trans 'Українська' %}</option>
+                    <option lang="crh" value="crh">{% trans 'Кримськотатарська' %}</option>
+                    <option lang="ru" value="ru">{% trans 'Російська' %}</option>
+                    <option lang="en" value="en">{% trans 'Англійська' %}</option>
+                </select>
+            </div> -->
+            <a class="menu-item">{% trans 'дім' %}</a> <br>
+            <a class="menu-item">{% trans 'вікі' %}</a> <br>
+            <a class="menu-item">{% trans 'пошук' %}</a> <br>
+            <a class="menu-item">{% trans 'самоврядування' %}</a>
+        {% endblock %}
+    </menu>
     <main>
         {% block content %} {% endblock %}
     </main>

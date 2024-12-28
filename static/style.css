@@ -17,7 +17,6 @@
 
 body {
     overflow-x: hidden;
-    background:;
 }
 
 /* Main paddings */
@@ -138,3 +137,57 @@ ul, ol {
     margin-bottom: 20px;
 }
 
+/* nontemplate~ */
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    right: 0;
+    height: fit-content;
+    padding: 0 8%;
+    background: var(--black-color);
+}
+
+.header-item {
+    display: flex;
+}
+
+#menu-button {
+    padding: 20px 10px;
+    background: inherit;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+#logo-img {
+    width: 60px;
+}
+
+#menu-button-img {
+    width: 40px;
+}
+
+menu {
+    background: var(--black-color);
+    color: var(--white-color);
+    padding: 14%;
+    font-size: 27px;
+}
+
+menu a {
+    text-transform: uppercase;
+}
+
+menu a:hover {
+    text-decoration: none;
+}
+
+#lang-box {
+    margin-bottom: 10%;
+}
